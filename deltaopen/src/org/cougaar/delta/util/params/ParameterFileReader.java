@@ -56,10 +56,10 @@ public class ParameterFileReader {
         }
         String fs = File.separator;
         if(alpInstallPath.endsWith(fs)) {
-          ret = alpInstallPath + "delta" + fs + "data" + fs + BasicConstants.PLUGINPROPERTIES_FILENAME;
+          ret = alpInstallPath + "deltaopen" + fs + "data" + fs + BasicConstants.PLUGINPROPERTIES_FILENAME;
         }
         else {
-          ret =  alpInstallPath + fs + "delta" + fs + "data" + fs + BasicConstants.PLUGINPROPERTIES_FILENAME;
+          ret =  alpInstallPath + fs + "deltaopen" + fs + "data" + fs + BasicConstants.PLUGINPROPERTIES_FILENAME;
         }
       }
       return ret;
