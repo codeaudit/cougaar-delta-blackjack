@@ -25,7 +25,7 @@ package org.cougaar.delta.util;
 public final class BasicConstants {
   private BasicConstants() {}
 
-  public static final String PLUGINPROPERTIES_FILENAME = "FGIPlugInProperties.ini";
+  public static final String PLUGINPROPERTIES_FILENAME = "SamplePlugInProperties.ini";
   public static final String DEFAULT_INSTALL_PATH = "c:\\DELTAInst\\";
   public static final String PLUGINPROPERTIES_ARG = "delta.plugin.properties";
   public static final String INSTALL_PATH_ARG = "org.cougaar.install.path";
