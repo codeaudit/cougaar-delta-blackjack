@@ -42,7 +42,7 @@ import org.cougaar.delta.util.BatchSearchResult;
  * and footer services.  It also contains accessors to the database
  * connection pool.
  * @author ALPINE (alpine-software@bbn.com)
- * @version $Id: BasicServlet.java,v 1.1 2002-04-30 17:33:27 cerys Exp $
+ * @version $Id: BasicServlet.java,v 1.2 2002-05-06 16:18:28 cerys Exp $
  */
 public abstract class BasicServlet extends HttpServlet {
 
@@ -263,7 +263,7 @@ public abstract class BasicServlet extends HttpServlet {
      * @param cfg the servlet configuration parameters
      *
      * @exception ServletException if the request could not be handled
-     * @see mil.darpa.log.alpine.delta.servlet.FgiServlet#processInit()
+     * @see org.cougaar.delta.servlet.FgiServlet#processInit()
      */
    public final void init(ServletConfig cfg) throws ServletException
   {
@@ -285,7 +285,7 @@ public abstract class BasicServlet extends HttpServlet {
      * @param cfg the servlet configuration parameters
      *
      * @exception ServletException if the request could not be handled
-     * @see mil.darpa.log.alpine.delta.servlet.FgiServlet#processDo()
+     * @see org.cougaar.delta.servlet.FgiServlet#processDo()
      */
   protected void processInit(ServletConfig cfg) throws ServletException
   {
@@ -295,7 +295,7 @@ public abstract class BasicServlet extends HttpServlet {
      * Called when the servlet is unloaded from the server.
      * Calls processDestroy() and destroys the connection pool if necessary
      *
-     * @see mil.darpa.log.alpine.delta.servlet.FgiServlet#processDestroy()
+     * @see org.cougaar.delta.servlet.FgiServlet#processDestroy()
      */
   public final void destroy()
   {
@@ -306,7 +306,7 @@ public abstract class BasicServlet extends HttpServlet {
     /**
      * Can be used by subclasses to do something when the servlet is unloaded from the server.
      *
-     * @see mil.darpa.log.alpine.delta.servlet.FgiServlet#destroy()
+     * @see org.cougaar.delta.servlet.FgiServlet#destroy()
      */
   protected void processDestroy()
   {
@@ -341,7 +341,7 @@ public abstract class BasicServlet extends HttpServlet {
      *
      * @exception IOException if detected when handling the request
      * @exception ServletException if the request could not be handled
-     * @see mil.darpa.log.alpine.delta.servlet.FgiServlet#processGet()
+     * @see org.cougaar.delta.servlet.FgiServlet#processGet()
      */
   public final void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException
@@ -423,7 +423,7 @@ public abstract class BasicServlet extends HttpServlet {
      *
      * @exception IOException if detected when handling the request
      * @exception ServletException if the request could not be handled
-     * @see mil.darpa.log.alpine.delta.servlet.FgiServlet#doGet()
+     * @see org.cougaar.delta.servlet.FgiServlet#doGet()
      */
   public void processGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException
@@ -474,7 +474,7 @@ public abstract class BasicServlet extends HttpServlet {
      *
      * @exception IOException if detected when handling the request
      * @exception ServletException if the request could not be handled
-     * @see mil.darpa.log.alpine.delta.servlet.FgiServlet#processPost()
+     * @see org.cougaar.delta.servlet.FgiServlet#processPost()
      */
   public final void doPost(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException
@@ -512,7 +512,7 @@ public abstract class BasicServlet extends HttpServlet {
      *
      * @exception IOException if detected when handling the request
      * @exception ServletException if the request could not be handled
-     * @see mil.darpa.log.alpine.delta.servlet.FgiServlet#doPost()
+     * @see org.cougaar.delta.servlet.FgiServlet#doPost()
      */
   public void processPost(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException

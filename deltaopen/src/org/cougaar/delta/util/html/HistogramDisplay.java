@@ -22,7 +22,7 @@
 
 package org.cougaar.delta.util.html;
 
-import mil.darpa.log.alpine.delta.util.*;
+import org.cougaar.delta.util.*;
 import java.io.*;
 
 /**
