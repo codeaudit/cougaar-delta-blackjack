@@ -62,7 +62,7 @@ another servlet as an alias, the ExplanationServlet. The procedure would be
 the same as above, except for the name and class of the servlet.
 
 4) Add the necessary jar files to the java class path of your web server.
-Start JRun administrator, choose jsm-default configure, to to the general tab, 
+Start JRun administrator, choose jsm-default configure, go to the general tab, 
 go to the java tab, add C:\DELTAInst\lib\deltaopen.jar;C:\DELTAInst\lib\classes12.zip;C:\DELTAInst\lib\core.jar;
 C:\DELTAInst\lib\glm.jar;C:\DELTAInst\lib\xerces.jar;C:\DELTAInst\lib\xmlparserv2.jar 
 to the java class path.
