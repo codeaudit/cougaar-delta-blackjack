@@ -1,0 +1,48 @@
+DELTA Open Source Module
+
+The DELTA Open source module contains components from
+DELTA/BlackJack that may be of general use. These components
+are described briefly below.  
+
+NOTICE:
+All of these modules have been tested against the Cougaar
+9.0 release.  Although most of these components should be fully
+compatible with Cougaar 9.2 itself, there may be some conversions
+required because of the JDK 1.3 -> 1.4 transition in Cougaar 9.2.
+
+
+Rule Editor and Rule Engine
+
+Rules are used to qualify candidate objects using the JESS rule
+engine. In the example provided, candidates for a loan are assigned
+either negative, neutral, or positive qualifications by using rules
+that check candidate characteristics.  The rule module includes an
+object representation for rules, a database table schema for rule
+storage, functionality for importing/exporting rules as xml, an
+applet-based rule editor, and a sample plugin that uses the rules to
+qualify some sample candidates using JESS. See the
+org.cougaar.delta.util.qrule package for more information on the rule
+representation, and the org.cougaar.delta.applet package for more
+information on the editor applet. Instructions for setting up this
+module and running the sample plugins are in the RuleModuleReadme
+file.
+
+
+Universal HTML Tables
+
+This module provides functionality for displaying tabular results
+as HTML tables. See the org.cougaar.delta.util.html package for
+details. The OpenRuleEdit servlet is an example that uses universal
+HTML tables. Sort by column, links, and tooltip messages are supported.
+
+
+FileIO
+
+This package provides classes for reading and writing 
+formatted text data files.  See the org.cougaar.delta.fileio package.
+
+
+Demand Viewer
+
+See the org.cougaar.blackjack.applet.demandviewer package contained in
+the separate BlackJackOpen distribution.
