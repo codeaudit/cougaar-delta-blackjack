@@ -1,0 +1,88 @@
+<!--"CONVERTED_APPLET"-->
+<!-- CONVERTER VERSION 1.0 -->
+
+<script>
+  var buttonText = "Create A New Rule";
+  var intendedTask = "CREATE";
+  var appletWidth = "160";
+  var appletHeight = "25";
+
+  var appletString = 
+    '<OBJECT\n' +
+    '  id="##APPLET_NAME##"\n' +
+    '  classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"\n' +
+    '  WIDTH = ' + appletWidth + '\n' +
+    '  HEIGHT = ' + appletHeight + '\n' +
+    '  codebase="http://java.sun.com/products/plugin/1.2/jinstall-12-win32.cab#Version=1,2,0,0">\n' +
+    '<PARAM NAME = CODE VALUE = "##CLASS##" >\n' +
+    '<PARAM NAME = CODEBASE VALUE = "##CODE_BASE##" >\n' +
+    '<PARAM NAME = ARCHIVE VALUE = "openruleedit.jar" >\n' +
+    '<PARAM NAME = NAME VALUE = "##APPLET_NAME##" >\n' +
+    '<PARAM NAME="type" VALUE="application/x-java-applet;version=1.2">\n' +
+    '<PARAM NAME = "sessionCookie" VALUE = "##SESSION_COOKIE##">\n' +
+    '<PARAM NAME = "spawningServlet" VALUE = "##HOME_SERVLET##">\n' +
+    '<PARAM NAME = "buttonText" VALUE = "' + buttonText + '">\n' +
+    '<PARAM NAME = "intendedTask" VALUE = "' + intendedTask + '">\n' +
+    '<COMMENT>\n' +
+    '<EMBED\n' +
+    '  type="application/x-java-applet;version=1.2"\n' +
+    '  java_CODE = "##CLASS##"\n' +
+    '  java_CODEBASE = "##CODE_BASE##"\n' +
+    '  java_ARCHIVE = "openruleedit.jar"\n' +
+    '  NAME = "##APPLET_NAME##"\n' +
+    '  WIDTH = ' + appletWidth + '\n' +
+    '  HEIGHT = ' + appletHeight + '\n' +
+    '  spawningServlet = "##HOME_SERVLET##"\n' +
+    '  sessionCookie = "##SESSION_COOKIE##"\n' +
+    '  buttonText = "' + buttonText + '"\n' +
+    '  intendedTask = "' + intendedTask + '"\n' +
+    '  pluginspage="http://java.sun.com/products/plugin/1.2/plugin-install.html"><NOEMBED></COMMENT>\n' +
+    '</NOEMBED></EMBED>\n' +
+    '</OBJECT>';
+</script>
+
+<!--"END_CONVERTED_APPLET"-->
+
+<script>
+  var hideButtons = "##HIDE_BUTTONS##";
+
+  function createButton () {
+    if (hideButtons == "")
+      document.writeln(appletString);
+  }
+
+  function importRuleButton () {
+    if (hideButtons == "") {
+      document.write(
+        "<p class=mo2>" +
+        "Import a Rule from an XML File:&nbsp;&nbsp;" +
+        "<input name=impRule type=file width=15> " +
+        "<input type=submit value=\"Import\">" +
+        "<br>Activate Rules on Import?&nbsp;&nbsp;" +
+        "<input name=activateImp type=radio value=\"Y\"> Yes&nbsp;&nbsp;" +
+        "<input name=activateImp type=radio value=\"N\" checked> No" +
+        "</p>"
+      );
+    }
+  }
+</script>
+
+<form name=RuleCreateButton method=GET>
+<table cellspacing=0 cellpadding=0 border=0 rules=none width="100%">
+  <tr>
+    <td width="0%"></td>
+    <td width="100%" align=center><script>createButton()</script></td>
+    <td width="0%"></td>
+  </tr>
+</table>
+</form>
+<form name=RuleImportForm method=POST enctype="multipart/form-data"
+  action="?command=IMPORT">
+<table cellspacing=0 cellpadding=0 border=0 rules=none width="100%">
+  <tr>
+    <td width="0%"></td>
+    <td width="100%" align=center><script>importRuleButton()</script></td>
+    <td width="0%"></td>
+  </tr>
+</table>
+</form>

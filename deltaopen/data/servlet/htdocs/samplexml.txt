@@ -1,0 +1,114 @@
+<PLAINTEXT>
+<?xml version="1.0"?>
+<!doctype document system "xml850.dtd">
+
+<PurchaseOrder>
+
+<PurchaseOrderHeader>
+<ProgramID>MOMS-XML</ProgramID>
+<PurchaseOrderDate>19990126</PurchaseOrderDate>
+<PurchaseOrderTime>0741</PurchaseOrderTime>
+<PurposeTypeCode>00</PurposeTypeCode>
+<OrderTypeCode>RL</OrderTypeCode>
+<ContractNumber>SP070098D9832</ContractNumber>
+<CallNumber>1002</CallNumber>
+<OrderIssueDate>19990126</OrderIssueDate>
+
+<TransactionSetHeader>
+<TransactionSetIDCode>850</TransactionSetIDCode>
+<TransactionSetNumber>0FGITEST</TransactionSetNumber>
+<ConventionRef>3050</ConventionRef>
+</TransactionSetHeader>
+
+<AdminCommunicationsContacts>
+
+<Contact>
+<ContractFunctionCode>BD</ContractFunctionCode>
+<ContactName >Steve Bohn</ContactName >
+<ContactTelephone>(937)431-1100</ContactTelephone>
+</Contact>
+
+<Contact>
+<ContractFunctionCode>PC</ContractFunctionCode>
+<ContactName>Steve Bohn</ContactName>
+<ContactTelephone>(937)431-1100</ContactTelephone>
+</Contact>
+
+</AdminCommunicationsContacts>
+
+<FOBRelatedInstructions>
+<ShipmentPaymentMethodCode>PS</ShipmentPaymentMethodCode>
+<ShipmentTermsCode>DE</ShipmentTermsCode>
+</FOBRelatedInstructions>
+
+<OrderPayment>
+<CreditCardNumber>4716550000000019</CreditCardNumber>
+<CreditCardExpirationDate>1/2100</CreditCardExpirationDate>
+</OrderPayment>
+
+<Addresses>
+
+<Address>
+<AddressType>ST</AddressType>
+<AddressLine1>US NAVAL AIR STATION               </AddressLine1>
+<AddressCode>R00334</AddressCode>
+<AddressLine2></AddressLine2>
+<AddressLine3></AddressLine3>
+<AddressLine4></AddressLine4>
+<City>BARBERS POINT OAHU</City>
+<StateOrProvinceCode>HI</StateOrProvinceCode>
+<PostalCode>968625050 </PostalCode>
+</Address>
+
+<Address>
+<AddressType>PO</AddressType>
+<AddressLine1>Steve Bohn</AddressLine1>
+<AddressLine2>PO Box 1212</AddressLine2>
+<City>Dayton</City>
+<StateOrProvinceCode>OH</StateOrProvinceCode>
+<PostalCode>45440</PostalCode>
+</Address>
+<Address>
+<AddressType>BY</AddressType>
+<AddressLine1>Steve Bohn</AddressLine1>
+<AddressLine2>PO Box 1212</AddressLine2>
+<City>Dayton</City>
+<StateOrProvinceCode>OH</StateOrProvinceCode>
+<PostalCode>45440</PostalCode>
+</Address>
+
+<Address>
+<AddressType>SE</AddressType>
+<AddressLine1>KODAK, INC.</AddressLine1>
+<AddressCode>23675</AddressCode>
+<AddressLine2>1212 Anywhere Lane</AddressLine2>
+<City>Providence</City>
+<StateOrProvinceCode>RI</StateOrProvinceCode>
+<PostalCode>01234</PostalCode>
+</Address>
+
+</Addresses>
+
+</PurchaseOrderHeader>
+
+<PurchaseOrderDetail>
+
+<DetailLineItem>
+<CLIN>1</CLIN>
+<Quantity>231</Quantity>
+<UnitOfIssue>EA</UnitOfIssue>
+<UnitPrice>186.0600</UnitPrice>
+<VendorPartID>55-9316</VendorPartID>
+<ReferenceNumber>R003349192001E</ReferenceNumber>
+<Priority>3</Priority>
+<DeliveryDays>5</DeliveryDays>
+</DetailLineItem>
+
+</PurchaseOrderDetail>
+
+<PurchaseOrderTrailer>
+<TransactionLineCount>1</TransactionLineCount>
+<TotalTransactionAmount>42979.86</TotalTransactionAmount>
+</PurchaseOrderTrailer>
+
+</PurchaseOrder>

@@ -1,0 +1,46 @@
+Package org.cougaar.delta.util.html
+
+This package provides classes for constructing HTML pages to display various 
+types of data. There are three basic types of HTML pages that can be 
+constructed by the classes in this package:  
+
+  - Pre-built pages based on template files
+  - Summary pages;
+  - Detail pages.
+
+Pre-built pages
+These are nearly-complete HTML files ("template files") where the static parts 
+of the page are pre-built, while the changeable data appears as a field
+name surrounded by double pound signs ("##").  A servlet would 
+use the classes TemplateProcessor, EncodingTemplate, and/or FormTemplate to 
+replace the delimited field names with actual data.
+
+Summary pages
+Multiple records (from a database query, for example) can be displayed using
+summary pages, where record data is formatted into tables diplaying 
+multiple records, one row per record.  Field names, which are selectable, 
+comprise the columns, and records can be sorted based on any user-specified
+column.  Individual data elements can be hyperlinked to other data pages.  
+A servlet would use the class UniversalTable to construct a summary page.
+
+Detail pages
+Detail pages display a single record, with each row representing a single
+field/data element by name and value.  Class UniversalDetail represents a 
+single page (record). Data is arranged on the page in sections using class 
+UniversalDetailSection (and its subclasses) and, within each section, by 
+item (i.e., row or data element) using class UniversalDetailItem (and its 
+subclasses).  As with the summary pages, individual items can be hyperlinked.
+
+By mixing and matching these three type pages and their components, a wide
+range of page designs may be created.  For example, a UniversalTable can be
+added to a pre-built page, allowing for a search form at the top
+and a table of records retrieved by the search at the bottom.
+
+Content to appear on the above pages is typically passed to the appropriate 
+class as part of a DataWrapper object (in package org.cougaar.delta.util.variant).  
+A DataWrapper simply wraps any type of input object so that it may be passed 
+to any of the various html-generating classes, which are expecting objects of 
+type DataWrapper.  This wrapper class also provides methods that allow a 
+programmer to set and extract various properties of the wrapped object.
+
+This information is also available in the package-level Javadoc.

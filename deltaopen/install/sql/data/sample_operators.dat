@@ -1,0 +1,11 @@
+## Note that lines that begin with '#' are comment lines (for this file)
+## If you comment out an operator, DO NOT REUSE THE OPERATOR_ID!!! 
+##  --> There are plenty of other numbers to choose from.
+100,=,=,number,number
+101,>,>,number,number
+102,>=,>=,number,number
+103,<,<,number,number
+104,<=,<=,number,number
+105,!=,<>,number,number
+106,is,eq,anything,anything
+107,is not,neq,anything,anything

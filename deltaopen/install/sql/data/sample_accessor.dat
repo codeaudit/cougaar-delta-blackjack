@@ -1,0 +1,8 @@
+100, Loan Request, Loan Amount, Currency, LoanAmount, BigDecimal, getLoanAmount
+101, Loan Request, Loan Years, Integer, LoanYears, BigDecimal, getLoanYears
+102, Loan Request, Monthly Payment, Currency, MonthlyPayment, BigDecimal, getMonthlyPayment
+103, History, Has Recent Loan Default, boolean, HasRecentDefault, Boolean, hasRecentDefault
+104, History, Total Existing Debt, Currency, TotalDebt, BigDecimal, getTotalDebt
+105, Assets, Total Assets, Currency, TotalAssets, BigDecimal, getTotalAssets
+106, Assets, Liquid Assets, Currency, LiquidAssets, BigDecimal, getLiquidAssets
+107, Assets, Monthly Income, Currency, MonthlyIncome, BigDecimal, getMonthlyIncome

@@ -1,0 +1,40 @@
+Package org.cougaar.delta.fileio
+
+This package provides classes for reading and writing 
+formatted text data files.  While standard Java classes 
+can read delimited text files, no facilities are 
+available to read formatted data that uses no delimiters.  
+Each line in a text file constitutes a record (i.e., 
+records are separated by newline characters), and, 
+within each record, fields are defined based on their 
+character position in the line.  For example, the field 
+named "foo" could be defined as those characters in 
+record positions 1-3.  The classes in this package allow 
+the programmer to define custom file formats, record 
+formats, and field formats so that any formatted text 
+file can be read or written.  Note that "files" are made 
+up of one or more "records", and records are made up of 
+one or more "fields".  The format of each of these 
+components (files, records, and fields) can be defined 
+using the appropriate classes in this package.  The 
+classes also provide methods for reading and writing 
+these formatted files.
+
+These classes depend on the following system properties:
+
+org.cougaar.install.path: the path to the top level 
+     installation directory of the Cougaar files
+org.cougaar.data.path: the path to where data files are 
+     stored
+
+These properties can be set when the Cougaar node is run by including the following arguments with the java.exe command:
+
+-Dorg.cougaar.install.path=(enter the path to the top 
+     level installation directory)
+-Dorg.cougaar.delta.data.path=(enter the path to the data 
+     directory)
+
+This information is also available in the package-level Javadoc.
+
+
+

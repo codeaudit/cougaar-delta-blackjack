@@ -1,0 +1,85 @@
+/* links are default blue */
+A:link {text-decoration: none; color: blue;}
+
+/* does not mark visited links in a different color */
+A:visited {text-decoration: none; color: blue;}
+
+/* this indicates that hovering over a link will cause the */
+/* link to be red */
+A:hover {   color:#ad0000;}
+
+/* note that the order of specification A:link, A:visited, A:hover */
+/* is important. The latter one takes precedent over the former, so */
+/* if A:hover is specified before A:visited, all previously visited */
+/* links remain blue because hover got overridden by visited */
+
+
+/* turn off tiling of background images on the login screen and home page */
+BODY.login { background-repeat: no-repeat;
+             background-position: top center }
+BODY.home  { background-repeat: no-repeat;
+             background-position: top right }
+
+
+/* this class is used for summary table (bottom of page) headers */
+.mo1 {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-style: normal; font-weight: normal;}
+
+/* used for the links at the top of the summary and details pages */
+.mo3 {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-style: normal; font-weight: normal;}
+
+/* used for the names of search criteria in the search box */
+/* used for create/import new contract */
+.mo2 {  font-family: Arial, Helvetica, sans-serif; font-size: 11pt; font-style: normal; font-weight: normal;}
+
+.mo4 {  font-family: Arial, Helvetica, sans-serif; font-size: 13pt; font-style: normal; font-weight: normal; color: #d6d5b4;}
+.mo4 A {text-decoration: none; color: black;}
+
+.mo5 {  font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; font-weight: normal; }
+.mo5 A {text-decoration: none; color: #1a3b54;}
+
+.mo6 {  font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; font-weight: normal; }
+.mo6 A {text-decoration: none; color: #000000;}
+
+.mo7 {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-style: normal; font-weight: normal; color: #25465c;}
+
+.mo8 {  font-family: Arial, Helvetica, sans-serif; font-size: 9pt; font-style: normal; font-weight: normal; color: #476b84;}
+
+/* used for page numbers */
+.mo9 {  font-family: Arial, Helvetica, sans-serif; font-size: 13pt; font-style: normal; font-weight: normal; color: black;}
+
+/* used to label the search box, ie "Search Criteria" */
+.mo10 {  font-family: Arial, Helvetica, sans-serif; font-size: 14pt; font-style: normal; font-weight: normal; color: black;}
+
+/* used for labeling the page, ie "Contract Summary" */
+.mo11 {  font-family: Arial, Helvetica, sans-serif; font-size: 24pt; font-style: normal; font-weight: normal; color: black;}
+
+/* used in Login.html, permissionDenied.html */
+.mo12 {  font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-style: normal; font-weight: normal; color: #ffffff;}
+
+/* not used, as far as I can tell */
+.mo12g { font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-style: normal; font-weight: normal; color: #ccffcc;}
+
+/* not used, as far as I can tell */
+.mo12y { font-family: Arial, Helvetica, sans-serif; font-size: 16pt; font-style: normal; font-weight: normal; color: #ffffcc;}
+
+/* used for State names in RegionEditor.html */
+.mo13 {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; color: black;}
+
+/* used in fgihome.html */
+.home {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt; font-style: normal; font-weight: bold; color: #ffffff; }
+.home A {text-decoration: none; }
+
+/* used in fgihome.html */
+.homeHeading {  font-family: Arial, Helvetica, sans-serif; font-size: 12pt; font-style: italic; font-weight: bold; color: #ffffff;}
+.homeHeading A {text-decoration: none; }
+
+
+
+
+
+
+
+
+
+
+

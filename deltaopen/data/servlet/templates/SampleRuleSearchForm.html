@@ -1,0 +1,43 @@
+<center><p class=mo11><b>Rule Summary</b></p></center>
+<br>
+<form method="GET">
+<input name="command" type=hidden value="FIND"></input>
+<center>
+<table bgcolor="#cbd9dd" cellpadding=0 cellspacing=0 border=5 rules=none>
+  <tr>
+    <td align=center colspan=4><p class="mo10">Search Criteria</p></td>
+  </tr>
+  <tr>
+    <td height=5></td>
+  </tr>
+  <tr>
+    <td nowrap width=300>
+      <p class=mo2>
+        <input name=ruleName type=text value=##ENCODE:ruleName##>
+          Rule Name<br>
+        <select name=action>
+          ##action_OPTIONS##
+        </select>
+          Rule Action<br>
+      </p>
+    </td>
+    <td width="25"></td>
+    <td nowrap width=300>
+      <p class=mo2>
+        <input name=showTest type=checkbox ##showTest##>
+          Display Test Rules<br>
+        <input name=showInactive type=checkbox ##showInactive##>
+          Display Inactive Rules
+      </p>
+    </td>
+    <td width="80" align=right>
+      <input type=submit value="Search"></input>
+    </td>
+  </tr>
+</table>
+</center>
+</form>
+
+<hr>
+
+<br>

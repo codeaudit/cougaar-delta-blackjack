@@ -1,0 +1,50 @@
+#!/bin/csh -f
+
+source $COUGAAR_INSTALL_PATH/bin/setlibpath.csh
+source $COUGAAR_INSTALL_PATH/bin/setarguments.csh
+
+set node = $argv[1]
+set rest="$argv[2-]"
+if ( "$node" == "" ) then
+  set node="Clusters"
+endif
+
+if ( "$node" == "admin" ) then
+    set args="-c -r -n Administrator -p 8000 $rest"
+    set MYMEMORY="-Djava.compiler=NONE"
+else 
+    set args="-n $node -c $rest"
+    # arguments to adjust (defaults are given)
+    # -Xmx64m	      # max java heap
+    # -Xms3m	      # min (initial) java heap
+    # -Xmaxf0.6       # max heap free percent
+    # -Xminf0.35      # min heap free percent
+    # -Xmaxe4m        # max heap expansion increment
+    # -Xmine1m	      # min heap expansion increment
+    # -Xoss400k       # per-thread *java* stack size
+    set MYMEMORY="-Xmx768m -Xms64m -Xmaxf0.9 -Xminf0.1 -Xmaxe16m -Xoss128k"
+    #set MYMEMORY="-Xmx300m -Xms100m"
+endif
+
+set osargs=""
+set os=`uname`
+if ("$os" == "Linux") then
+    # only run with green threads, since SMP is still rare
+    set osargs="-green"
+    # set some system runtime limits
+    limit stacksize 16m    #up from 8m
+    limit coredumpsize 0   #down from 1g
+    #turn this on to enable inprise JIT
+    #setenv JAVA_COMPILER javacomp
+endif
+
+set javaargs="$osargs $MYPROPERTIES $MYMEMORY -classpath $LIBPATHS"
+
+if ($?COUGAAR_DEV_PATH) then
+    echo java $javaargs org.cougaar.core.node.Node $args
+endif
+
+
+# exec instead of eval
+exec java $javaargs org.cougaar.core.node.Node $args
+

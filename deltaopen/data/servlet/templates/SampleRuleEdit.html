@@ -1,0 +1,163 @@
+<!--"CONVERTED_APPLET"-->
+<!-- CONVERTER VERSION 1.0 -->
+
+<script>
+  var buttonText = "Edit";
+  var intendedTask = "EDIT";
+  var appletWidth = 70;
+  var appletHeight = 25;
+
+  var appletString = 
+    '<OBJECT\n' +
+    '  id="##APPLET_NAME##"\n' +
+    '  classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"\n' +
+    '  WIDTH = ' + appletWidth + '\n' +
+    '  HEIGHT = ' + appletHeight + '\n' +
+    '  codebase="http://java.sun.com/products/plugin/1.2/jinstall-12-win32.cab#Version=1,2,0,0">\n' +
+    '<PARAM NAME = CODE VALUE = "##CLASS##" >\n' +
+    '<PARAM NAME = CODEBASE VALUE = "##CODE_BASE##" >\n' +
+    '<PARAM NAME = ARCHIVE VALUE = "openruleedit.jar" >\n' +
+    '<PARAM NAME = NAME VALUE = "##APPLET_NAME##" >\n' +
+    '<PARAM NAME="type" VALUE="application/x-java-applet;version=1.2">\n' +
+    '<PARAM NAME = "sessionCookie" VALUE = "##SESSION_COOKIE##">\n' +
+    '<PARAM NAME = "spawningServlet" VALUE = "##HOME_SERVLET##">\n' +
+    '<PARAM NAME = "buttonText" VALUE = "' + buttonText + '">\n' +
+    '<PARAM NAME = "intendedTask" VALUE = "' + intendedTask + '">\n' +
+    '<COMMENT>\n' +
+    '<EMBED\n' +
+    '  type="application/x-java-applet;version=1.2"\n' +
+    '  java_CODE = "##CLASS##"\n' +
+    '  java_CODEBASE = "##CODE_BASE##"\n' +
+    '  java_ARCHIVE = "openruleedit.jar"\n' +
+    '  NAME = "##APPLET_NAME##"\n' +
+    '  WIDTH = ' + appletWidth + '\n' +
+    '  HEIGHT = ' + appletHeight + '\n' +
+    '  spawningServlet = "##HOME_SERVLET##"\n' +
+    '  sessionCookie = "##SESSION_COOKIE##"\n' +
+    '  buttonText = "' + buttonText + '"\n' +
+    '  intendedTask = "' + intendedTask + '"\n' +
+    '  pluginspage="http://java.sun.com/products/plugin/1.2/plugin-install.html"><NOEMBED></COMMENT>\n' +
+    '</NOEMBED></EMBED>\n' +
+    '</OBJECT>';
+</script>
+
+<!--
+<APPLET
+    CODE = "##CLASS##"
+    CODEBASE = "##CODE_BASE##"
+    WIDTH = ##WIDTH##
+    HEIGHT = ##HEIGHT##
+    NAME = "##APPLET_NAME##">
+  <PARAM NAME = "spawningServlet" VALUE  = "##HOME_SERVLET##">
+</APPLET>
+-->
+<!--"END_CONVERTED_APPLET"-->
+
+<script>
+  var hideButtons = "##HIDE_BUTTONS##";
+  var ruleName = "##RULE_NAME##";
+  var hideBack = "##HIDE_BACK##";
+  var deleteString = "<input type=button value='Delete' onclick='deleteRule()'>";
+  var refreshString ="<input type=button value='Refresh View' onclick='refreshView()'>";
+  var backString ="<input type=button value='Back to Summary' onclick='backEgress()'>";
+
+  var exportString = "<input type=button value='Export as XML' " +
+    "onclick='exportXml()'>";
+
+  function writeTable () {
+    if (hideButtons == "")
+    {
+      document.writeln("<td width='1%'></td>");
+      document.writeln("<td width='17%' align=center>");
+      document.writeln(appletString);
+      document.writeln("</td>");
+      document.writeln("<td width='1%'></td>");
+      document.writeln("<td width='17%' align=center>");
+      document.writeln(exportString);
+      document.writeln("</td>");
+      document.writeln("<td width='1%'></td>");
+      document.writeln("<td width='15%' align=center>");
+      document.writeln(deleteString);
+      document.writeln("</td>");
+      document.writeln("<td width='1%'></td>");
+      document.writeln("<td width='17%' align=center>");
+      document.writeln(refreshString);
+      document.writeln("</td>");
+      document.writeln("<td width='1%'></td>");
+      document.writeln("<td width='17%' align=center>");
+      document.writeln(backString);
+      document.writeln("<td width='1%'></td>");
+    }
+    else
+    {
+      document.writeln("<td width='1%'></td>");
+      document.writeln("<td width='17%' align=center>");
+      document.writeln("</td>");
+      document.writeln("<td width='1%'></td>");
+      document.writeln("<td width='17%' align=center>");
+      document.writeln(exportString);
+      document.writeln("</td>");
+      document.writeln("<td width='1%'></td>");
+      document.writeln("<td width='17%' align=center>");
+      document.writeln(refreshString);
+      document.writeln("</td>");
+      document.writeln("<td width='1%'></td>");
+      document.writeln("<td width='17%' align=center>");
+      document.writeln(backString);
+      document.writeln("</td>");
+      document.writeln("<td width='1%'></td>");
+      document.writeln("<td width='17%' align=center>");
+      document.writeln("</td>");
+      document.writeln("<td width='1%'></td>");
+    }
+  }
+  function editButton () {
+    if (hideButtons == "")
+      document.writeln(appletString);
+  }
+
+  function deleteButton () {
+    if (hideButtons == "")
+      document.writeln(
+        "<input type=button value='Delete' onclick='deleteRule()'>");
+  }
+
+  function refreshButton () {
+    document.writeln(
+        "<input type=button value='Refresh View' onclick='refreshView()'>");
+  }
+
+  function deleteRule () {
+    if (confirm('Are you sure you want to delete "' + ruleName + '"?')) {
+      location.replace("OpenRuleEdit?command=DELETE");
+    }
+  }
+
+  function refreshView () {
+    location.replace("?command=SHOW_DETAIL");
+  }
+
+  function backButton () {
+    if (hideBack == "") {
+      document.writeln(
+        "<input type=button value='Back to Summary' onclick='backEgress()'>");
+    }
+  }
+
+  function exportXml () {
+    location = "?command=XML_DUMP";
+  }
+
+  function backEgress () {
+    location.replace("?command=##BACK_COMMAND##");
+  }
+</script>
+
+<form name=RuleButtonForm method=GET>
+<input name=command type=hidden value="ADD">
+<table cellspacing=0 cellpadding=0 border=0 rules=none width="100%">
+  <tr>
+  <script> writeTable() </script>
+  </tr>
+</table>
+</form>

@@ -1,0 +1,20 @@
+[Prototype]     SupplyOrganization
+        
+[UniqueId]      "UTC/SupplyOrg"
+
+[UIC]		"UIC/SampleCluster"
+
+[Relationship]
+        
+[TypeIdentificationPG]                      
+TypeIdentification		String	"UTC/RTOrg"
+Nomenclature			String	"HHC  HVY DIV	ARMOR"
+AlternateTypeIdentification	String	"SRC/87004L100100"
+
+[OrganizationPG]
+
+[MilitaryOrgPG]
+UIC                   String   ""
+Echelon               String   ""
+UTC                   String   ""
+SRC                   String   "87004L100100"

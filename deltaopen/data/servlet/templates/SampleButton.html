@@ -1,0 +1,23 @@
+<script>
+  var hideTheButton = "##HIDE##";
+
+  function buttonPress () {
+    location.replace("?command=##COMMAND##");
+  }
+
+  function includeButton () {
+    document.writeln(
+      '<input type=button value=##JSENCODE:BUTTON_TEXT## ' +
+        'onclick="buttonPress()">');
+  }
+</script>
+
+<form>
+<table cellspacing=0 cellpadding=0 rules=none border=0 width="100%">
+  <tr>
+    <td width="15%"></td>
+    <td width="70%" align=center><script>includeButton()</script></td>
+    <td width="15%"></td>
+  </tr>
+</table>
+</form>
