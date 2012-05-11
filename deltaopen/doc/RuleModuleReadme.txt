@@ -8,7 +8,7 @@ your directory.
 
 2) Copy necessary jar files to DELTAInst/lib. You will need tomcat_33.jar,
 webserver.jar, webtomcat.jar, servlet.jar, log4j.jar and xerces.jar (available from Cougaar). 
-You will need core.jar, glm.jar, javaiopatch.jar, planserver.jar, toolkit.jar
+You will need core.jar, glm.jar, planserver.jar, toolkit.jar
 from Cougaar. Additionally, you will need classes12.jar, jess50.jar,
 and swingall.jar. 
 for classes12.jar
