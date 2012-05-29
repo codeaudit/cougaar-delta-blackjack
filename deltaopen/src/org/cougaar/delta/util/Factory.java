@@ -95,8 +95,8 @@ public abstract class Factory {
     }
 
     // JDBC Connection URL
-    Enumeration enum = p.getParameterValues("ConnectionPool", "jdbc.connect.String");
-    String dbConnStr = p.concatenate(enum, ",", "jdbc:oracle:thin:@delta.alpine.bbn.com:1521:fgi,wwright,wwright");
+    Enumeration enm = p.getParameterValues("ConnectionPool", "jdbc.connect.String");
+    String dbConnStr = p.concatenate(enm, ",", "jdbc:oracle:thin:@delta.alpine.bbn.com:1521:fgi,wwright,wwright");
     setDbConnectionString(dbConnStr);
   }
 
@@ -1059,11 +1059,11 @@ public abstract class Factory {
      * @see java.util.Hashtable#elements
      */
     public Enumeration elements() {
-        Enumeration enum = table.elements();
+        Enumeration enm = table.elements();
         Vector vec = new Vector();
-        while (enum.hasMoreElements())
+        while (enm.hasMoreElements())
         {
-            Object obj = ((Reference)enum.nextElement()).get();
+            Object obj = ((Reference)enm.nextElement()).get();
             if (obj != null)
             {
                 vec.addElement(obj);

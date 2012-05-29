@@ -110,10 +110,10 @@ public abstract class BasicPlugin extends SimplePlugin {
 
       // Get the connection information for use of non-persistence connection
       db_driver = parameter_reader_.getParameter(GLOBAL_PROPERTIES, "reportpersist.oracle.Driver", "oracle.jdbc.driver.OracleDriver");
-      Enumeration enum = parameter_reader_.getParameterValues(GLOBAL_PROPERTIES, "reportpersist.oracle.ConnectionString");
-      db_connection_string = (enum.hasMoreElements() ? (String)enum.nextElement() : "");
-      db_user = (enum.hasMoreElements() ? (String)enum.nextElement() : "");
-      db_password = (enum.hasMoreElements() ? (String)enum.nextElement() : "");
+      Enumeration enm = parameter_reader_.getParameterValues(GLOBAL_PROPERTIES, "reportpersist.oracle.ConnectionString");
+      db_connection_string = (enm.hasMoreElements() ? (String)enm.nextElement() : "");
+      db_user = (enm.hasMoreElements() ? (String)enm.nextElement() : "");
+      db_password = (enm.hasMoreElements() ? (String)enm.nextElement() : "");
 
       Class.forName(db_driver);
 

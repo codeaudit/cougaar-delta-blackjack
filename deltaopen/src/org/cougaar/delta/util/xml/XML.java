@@ -205,10 +205,10 @@ public class XML {
     }
 
     AttributeExtractor ae = new AttributeExtractor(t);
-    Enumeration enum = ae.keys();
+    Enumeration enm = ae.keys();
     // Drag out the many attributes for this tag.
-    while (enum.hasMoreElements()) {
-      String name = (String) enum.nextElement();
+    while (enm.hasMoreElements()) {
+      String name = (String) enm.nextElement();
       // If the attribute contained a Delete node rather than a regular value, remove it
       // from the bundle.
       if (ae.getString(name).equals(AttributeExtractor.DELETE_VALUE)) {

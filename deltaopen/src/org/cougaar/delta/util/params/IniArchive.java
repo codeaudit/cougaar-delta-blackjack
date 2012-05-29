@@ -277,8 +277,8 @@ public class IniArchive {
                          * 		       ** to the existing entry and discard the newly created entry
                          * 		       */
                         {
-                            for (Enumeration enum = e.getValues(); enum.hasMoreElements(); )
-                                e2.addValue((String) enum.nextElement());
+                            for (Enumeration enm = e.getValues(); enm.hasMoreElements(); )
+                                e2.addValue((String) enm.nextElement());
                         }
 
 
